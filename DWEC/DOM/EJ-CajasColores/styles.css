@@ -1,0 +1,59 @@
+:root {
+    background-color: azure;
+    
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.cuadrado {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  border: 3px solid black;
+}
+
+.rojo {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.verde {
+  background-color: green;
+}
+
+.negro {
+  background-color: rgb(35, 33, 33);
+}
+
+button {
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.circulo {
+  border-radius: 150px;
+}
+
+.sombra {
+  box-shadow: 6px 6px 5px black;
+}
+
+.sombraDentro {
+  box-shadow: inset 6px 6px 5px black;
+}

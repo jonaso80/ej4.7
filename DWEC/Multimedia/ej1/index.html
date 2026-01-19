@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Ejercicio 1 -- Multimedia</title>
+  </head>
+  <body>
+    <div class="video">
+      <div class="reproductor-wrapper">
+        <video id="reproductor">
+          <source src="media/rick.mp4" type="video/mp4" id="videoSource" />
+        </video>
+      <div class="anuncio">
+        <p>Podrás quitar la publicidad después de... 10 segundos</p>
+        <img src="icons/cerrar.png" alt="Cerrar" id="close">
+      </div>
+      </div>
+      <div class="barra-contenedor">
+        <div class="tiempo"></div>
+      </div>
+      <div class="controles">
+        <div class="control" id="silenciar">
+          <img src="icons/silenciar.svg" alt="Silenciar" />
+          <p>Silenciar</p>
+        </div>
+        <div class="control" id="retroceder">
+          <img src="icons/-10sec.svg" alt="-10 seg" />
+          <p>-10 segundos</p>
+        </div>
+        <div class="control" id="play">
+          <img src="icons/play.svg" alt="Play/Pause" />
+          <p>Play/Pause</p>
+        </div>
+        <div class="control" id="avanzar">
+          <img src="icons/10sec.svg" alt="+10 seg" />
+          <p>+10 segundos</p>
+        </div>
+        <div class="control" id="reiniciar">
+          <img src="icons/reiniciar.svg" alt="Reiniciar" />
+          <p>Reiniciar</p>
+        </div>
+        <div class="control" id="volumeDown">
+          <img src="icons/volumeDown.svg" alt="Bajar vol" />
+          <p>Bajar Vol</p>
+        </div>
+        <div class="control" id="volumeUp">
+          <img src="icons/volumeUp.svg" alt="Subir vol" />
+          <p>Subir Vol</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lista">
+      <img
+        src="img/cat.png"
+        alt="Gato"
+        class="miniatura"
+        data-video-src="media/cat.mp4"
+      />
+      <img
+        src="img/doraemon.png"
+        alt="Doraemon"
+        class="miniatura"
+        data-video-src="media/doraemon.mp4"
+      />
+      <img
+        src="img/ibaicore.png"
+        alt="Ibai"
+        class="miniatura"
+        data-video-src="media/ibaicore.mp4"
+      />
+      <img
+        src="img/nano.png"
+        alt="El nano"
+        class="miniatura"
+        data-video-src="media/nano.mp4"
+      />
+      <img
+        src="img/rick.png"
+        alt="Rickrolleado xd"
+        class="miniatura"
+        data-video-src="media/rick.mp4"
+      />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS Sintaxis 22/09/2025</title>
+</head>
+<body>
+    <script>
+        //Ejercicio 1
+        const fecha = new Date("1978-01-12");
+
+        let anyo = fecha.getFullYear();
+        let mes = fecha.getMonth() + 1;
+        let dia = fecha.getDay();
+
+        const meses = ["enero","febrero","marzo"];
+
+        const fechaFormateada = dia + " de " + meses[mes] + " de " + anyo;
+        document.write(fechaFormateada);
+        
+        //Ejercicio 2
+        let numeroAdivinar = Math.round(Math.random()*1000)+1;
+        let numeroUser = prompt("Introduce un numero entre 1 y 1000");
+
+        while (numeroUser < 1 || numeroUser > 1000) {
+            numeroUser = prompt("El numero esta fuera de los limites. Introduce uno válido: ");
+        }
+
+        do {
+            if (numeroUser < numeroAdivinar) {
+                numeroUser = prompt("El numero que buscas es mayor. Introduce otro: ");
+            }else {
+                numeroUser = prompt("El numero que buscas es menor. Introduce otro número: ");
+            }
+        }while (numeroUser != numeroAdivinar);
+
+        if (numeroUser==numeroAdivinar) {
+                alert("Adivinaste!");
+            }
+
+        //Ejercicio 3
+        let caracter = '';
+
+        let vocales = ['A','E','I','O','U'];
+
+        while (caracter !== ' ') {
+            caracter = prompt("Dime un caracter: ").toLocaleUpperCase();
+
+            if (caracter !== ' ') {
+                let esVocal = false;
+
+                for (let i=0;i< vocales.length;i++) {
+                    if (caracter === vocales[i]) {
+                        esVocal = true;
+                    }
+                }
+
+                if (esVocal) {
+                    alert("Vocal");
+                }else {
+                    alert("Consonante");
+                }
+            }
+        }
+
+        //Solucion en una linea: "aeiou".includes(toLowerCase(caracter)) ? alert("Es vocal") : alert("No es vocal");
+
+        //Ejercicio 4
+        let limiteInferior, limiteSuperior;
+
+        do {
+            limiteInferior = parseInt(prompt("Introduce el límite inferior:"));
+            limiteSuperior = parseInt(prompt("Introduce el límite superior:"));
+
+            if (limiteInferior >= limiteSuperior) {
+                alert("El límite inferior debe ser menor que el superior. Vuelve a intentarlo.");
+            }
+        } while (limiteInferior >= limiteSuperior);
+
+        let sumaDentro = 0;
+        let fueraIntervalo = 0;
+        let igualInferior = false;
+        let igualSuperior = false;
+
+        let numero;
+        do {
+            numero = parseInt(prompt("Introduce un número (0 para terminar):"));
+
+            if (numero !== 0) {
+                if (numero > limiteInferior && numero < limiteSuperior) {
+                    sumaDentro += numero;
+                } else if (numero === limiteInferior) {
+                    igualInferior = true;
+                } else if (numero === limiteSuperior) {
+                    igualSuperior = true;
+                } else {
+                    fueraIntervalo++;
+                }
+            }
+        } while (numero !== 0);
+
+        alert("Resultados:\n" +
+            "- Suma de números dentro del intervalo: " + sumaDentro + "\n" +
+            "- Números fuera del intervalo: " + fueraIntervalo + "\n" +
+            "- ¿Se introdujo el límite inferior?: " + (igualInferior ? "Sí" : "No") + "\n" +
+            "- ¿Se introdujo el límite superior?: " + (igualSuperior ? "Sí" : "No"));
+
+        //Ejercicio 5
+        let coloresRGB = prompt("Introduce los colores en RGB separ ados por comas (ejemplo: 255, 0, 0):");
+        let colores = coloresRGB.split(",");
+        let r = parseInt(colores[0]);
+        let g = parseInt(colores[1]);
+        let b = parseInt(colores[2]);
+
+        let colorHexadecimal = (r.toString(16) + g.toString(16) + b.toString(16)).toUpperCase();
+        alert("El color en hexadecimal es: #" + colorHexadecimal);
+
+        //Ejercicio 6
+        let cadenaOriginal = prompt("Introduce una cadena:");
+        let numeros = cadenaOriginal.split("*").map(numero => parseInt(numero));
+
+        numeros.sort((a, b) => b - a);
+        let cadenaOrdenada = numeros.join("*");
+
+        alert("La cadena ordenada es: " + cadenaOrdenada);
+
+    </script>
+</body>
+</html>

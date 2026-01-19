@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-image: url("cerebro.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+
+header ul {
+    display: flex;
+    gap: 20px;
+    background-color: #2D54A9;
+    color: white;
+    list-style-type: none;
+    padding: 10px;;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+header p {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+}
+
+header button {
+    background-color: #3F77F3;
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+#caracteristicas {
+    text-align: center;
+    padding-top: 25px;
+}
+
+.caracteristicas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.caracteristica {
+    border-radius: 12px;
+    background-color: #FBF7F7;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.caracteristica img {
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.caracteristica .texto h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.caracteristica .texto p {
+  font-size: 0.95em;
+  color: #666;
+  line-height: 1.4;
+}
+
+#galeria {
+    text-align: center;
+    background-color: #FBF7F7;
+    padding-bottom: 35px;
+    margin-bottom: 0;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    background-color: #FBF7F7;
+    margin-top: 0px;
+    padding-bottom: 60px;
+}
+
+.galeria img {
+    width: 90%;
+    object-fit: cover;
+    margin: auto;
+    border-radius: 15px;
+}
+
+#especificacion {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.especificaciones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 30px;
+    
+}
+
+.especificacion {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.especificacion h2 {
+    text-align: center;
+}
+
+.especificacion p {
+    text-align: center;
+    padding: 40px;
+}
+
+footer {
+    background-color: #2D54A9;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    margin-top: 70px;
+}

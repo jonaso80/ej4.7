@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario</title>
+</head>
+
+<body>
+    <script src="validar.js"></script>
+    <h1>Formulario Total</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" onblur="validarNombreApellidos(this.value)"/>
+        <br /><br />
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" onblur="validarNombreApellidos(this.value)"/>
+        <br /><br />
+        <label for="email">e-mail:</label>
+        <input type="text" id="email" name="email" onblur="validarEmail(this.value)" />
+        <br /><br />
+        <label for="dni">DNI:</label>
+        <input type="text" id="dni" name="dni" onblur="validarDNI(this.value)" />
+        <br /><br /> 
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" onblur="validarPassword(this.value)" />
+        <br /><br />
+        <label for="repitePassword">Repetir password:</label>
+        <input type="password" id="password2" name="password2" onblur="validarPasswordIguales(this.value)" />
+        <br /><br />
+        <label for="ip">IP-Equipo:</label>
+        <input type="text" id="ip" name="ip" onblur="validarIP(this.value)" />
+        <br /><br />
+        <button type="submit" id="enviar" name="Enviar" onclick="enviar()">Enviar</button>
+    </form>
+</body>
+
+</html>

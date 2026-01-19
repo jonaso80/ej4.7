@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 20px;
+}
+
+h1 {
+    color: #4a4e69;
+    margin-bottom: 30px;
+}
+
+/* --- Estilos del Tablero de Sudoku --- */
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    width: 450px; /* Tamaño fijo para el tablero */
+    height: 450px;
+    border: 3px solid #333; /* Borde exterior más grueso */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de cada celda */
+.celda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 1px solid #ccc; /* Borde interior */
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+/* Resaltar las sub-cuadrículas de 3x3 */
+/* Borde derecho más grueso para las columnas 3 y 6 */
+.celda:nth-child(3n) {
+    border-right-width: 3px;
+    border-right-color: #333;
+}
+
+/* Borde inferior más grueso para las filas 3 y 6 */
+/* Nota: JavaScript tendrá que añadir una clase a las celdas de la fila 3 y 6 */
+.borde-inferior-grueso {
+    border-bottom-width: 3px;
+    border-bottom-color: #333;
+}
+
+/* Estilos de las celdas interactivas/especiales (para usar con JS) */
+.celda-inicial {
+    /* Números que el usuario NO puede cambiar */
+    background-color: #e0e0e0;
+    font-weight: bold;
+    color: #000;
+    cursor: default;
+}
+
+.celda-seleccionada {
+    /* La celda que el usuario ha clickeado */
+    background-color: #a8dadc;
+}
+
+.celda-erronea {
+    /* La celda tiene un número incorrecto */
+    color: #e63946;
+    font-weight: bold;
+}
+
+/* --- Selector de Números (Teclado) --- */
+.selector-numeros {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.numero-celda {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    border: 2px solid #1d3557;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #457b9d;
+    color: #fff;
+    transition: background-color 0.1s;
+}
+
+.numero-celda:hover {
+    background-color: #1d3557;
+}
+
+.numero-celda-seleccionado {
+    /* El número que el usuario ha elegido para rellenar una celda */
+    background-color: #e63946;
+}
+
+/* --- Botones de Acción --- */
+.botones-accion {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.boton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1d3557;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.boton:hover {
+    background-color: #457b9d;
+}
+
+/* --- Mensajes --- */
+.mensajes {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    min-height: 25px; /* Para evitar saltos de layout */
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios Sintaxis 2 JS</title>
+  </head>
+  <body>
+    <h1>Ejercicios Sintaxis 2 JS</h1>
+
+    <script>
+      let ejercicio1 = function ej1() {
+        const fecha = new Date("1978-01-12");
+
+        let anyo = fecha.getFullYear();
+        let mes = fecha.getMonth();
+        let dia = fecha.getDate();
+
+        const meses = ["enero", "febrero", "marzo"];
+
+        const fechaFormateada = dia + " de " + meses[mes] + " de " + anyo;
+        alert(fechaFormateada);
+      };
+
+      let ejercicio2 = function ej2() {
+        let numeroAdivinar = Math.round(Math.random() * 1000) + 1;
+        let numeroUser = prompt("Introduce un numero entre 1 y 1000");
+
+        while (numeroUser < 1 || numeroUser > 1000) {
+          numeroUser = prompt(
+            "El numero esta fuera de los limites. Introduce uno válido: "
+          );
+        }
+
+        do {
+          if (numeroUser < numeroAdivinar) {
+            numeroUser = prompt(
+              "El numero que buscas es mayor. Introduce otro: "
+            );
+          } else {
+            numeroUser = prompt(
+              "El numero que buscas es menor. Introduce otro número: "
+            );
+          }
+        } while (numeroUser != numeroAdivinar);
+
+        if (numeroUser == numeroAdivinar) {
+          alert("Adivinaste!");
+        }
+      };
+
+      let ejercicio3 = function ej3() {
+        let caracter = "";
+
+        let vocales = ["A", "E", "I", "O", "U"];
+
+        while (caracter !== " ") {
+          caracter = prompt("Dime un caracter: ").toLocaleUpperCase();
+
+          if (caracter !== " ") {
+            let esVocal = false;
+
+            for (let i = 0; i < vocales.length; i++) {
+              if (caracter === vocales[i]) {
+                esVocal = true;
+              }
+            }
+
+            if (esVocal) {
+              alert("Vocal");
+            } else {
+              alert("Consonante");
+            }
+          }
+        }
+      };
+
+      let ejercicio4 = function ej4() {
+        let limiteInferior, limiteSuperior;
+
+        do {
+          limiteInferior = parseInt(prompt("Introduce el límite inferior:"));
+          limiteSuperior = parseInt(prompt("Introduce el límite superior:"));
+
+          if (limiteInferior >= limiteSuperior) {
+            alert(
+              "El límite inferior debe ser menor que el superior. Vuelve a intentarlo."
+            );
+          }
+        } while (limiteInferior >= limiteSuperior);
+
+        let sumaDentro = 0;
+        let fueraIntervalo = 0;
+        let igualInferior = false;
+        let igualSuperior = false;
+
+        let numero;
+        do {
+          numero = parseInt(prompt("Introduce un número (0 para terminar):"));
+
+          if (numero !== 0) {
+            if (numero > limiteInferior && numero < limiteSuperior) {
+              sumaDentro += numero;
+            } else if (numero === limiteInferior) {
+              igualInferior = true;
+            } else if (numero === limiteSuperior) {
+              igualSuperior = true;
+            } else {
+              fueraIntervalo++;
+            }
+          }
+        } while (numero !== 0);
+
+        alert(
+          "Resultados:\n" +
+            "- Suma de números dentro del intervalo: " +
+            sumaDentro +
+            "\n" +
+            "- Números fuera del intervalo: " +
+            fueraIntervalo +
+            "\n" +
+            "- ¿Se introdujo el límite inferior?: " +
+            (igualInferior ? "Sí" : "No") +
+            "\n" +
+            "- ¿Se introdujo el límite superior?: " +
+            (igualSuperior ? "Sí" : "No")
+        );
+      };
+
+      let ejercicio5 = function ej5() {
+        let coloresRGB = prompt(
+          "Introduce los colores en RGB separ ados por comas (ejemplo: 255, 0, 0):"
+        );
+        let colores = coloresRGB.split(",");
+        let r = parseInt(colores[0]);
+        let g = parseInt(colores[1]);
+        let b = parseInt(colores[2]);
+
+        let colorHexadecimal = (
+          r.toString(16) +
+          g.toString(16) +
+          b.toString(16)
+        ).toUpperCase();
+        alert("El color en hexadecimal es: #" + colorHexadecimal);
+      };
+
+      let ejercicio6 = function ej6() {
+        let cadenaOriginal = prompt("Introduce una cadena:");
+        let numeros = cadenaOriginal
+          .split("*")
+          .map((numero) => parseInt(numero));
+
+        numeros.sort((a, b) => b - a);
+        let cadenaOrdenada = numeros.join("*");
+
+        alert("La cadena ordenada es: " + cadenaOrdenada);
+      };
+
+      let opcion = prompt("Opcion: ");
+      switch (parseInt(opcion)) {
+        case 1:
+          ejercicio1();
+          break;
+        case 2:
+          ejercicio2();
+          break;
+        case 3:
+          ejercicio3();
+          break;
+        case 4:
+          ejercicio4();
+          break;
+        case 5:
+          ejercicio5();
+          break;
+        case 6:
+          ejercicio6();
+          break;
+        case 7:
+          alert("Saliendo...");
+          break;
+        default:
+          alert("Opción no válida");
+          break;
+      }
+
+      function sumar(num1, num2) {
+        return num1 + num2;
+      }
+      function restar(num1, num2) {
+        return num1 - num2;
+      }
+      function multiplicar(num1, num2) {
+        return num1 * num2;
+      }
+      function dividir(num1, num2) {
+        return num1 / num2;
+      }
+
+      let opcion2;
+
+      do {
+        opcion2 = prompt(
+          "(1) Sumar - (2) Restar - (3) Multiplicar - (4) Dividir - (otro para salir)"
+        );
+
+        switch (opcion2) {
+          case "1":
+            let a1 = parseFloat(prompt("Primer número:"));
+            let b1 = parseFloat(prompt("Segundo número:"));
+            alert("Resultado: " + sumar(a1, b1));
+            break;
+
+          case "2":
+            let a2 = parseFloat(prompt("Primer número:"));
+            let b2 = parseFloat(prompt("Segundo número:"));
+            alert("Resultado: " + restar(a2, b2));
+            break;
+
+          case "3":
+            let a3 = parseFloat(prompt("Primer número:"));
+            let b3 = parseFloat(prompt("Segundo número:"));
+            alert("Resultado: " + multiplicar(a3, b3));
+            break;
+
+          case "4":
+            let a4 = parseFloat(prompt("Primer número:"));
+            let b4 = parseFloat(prompt("Segundo número:"));
+            if (b4 === 0) {
+              alert("No se puede dividir entre 0");
+            } else {
+              alert("Resultado: " + dividir(a4, b4));
+            }
+            break;
+
+          default:
+            alert("Saliendo de la calculadora...");
+        }
+      } while (
+        opcion2 === "1" ||
+        opcion2 === "2" ||
+        opcion2 === "3" ||
+        opcion2 === "4"
+      );
+    </script>
+    <script type="module" src="menu.js">
+      
+      
+    </script>
+  </body>
+</html>

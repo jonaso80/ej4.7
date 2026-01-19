@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Ejercicio - Cajas de Colores</title>
+  </head>
+
+  <body>
+    <div class="contenedor">
+      <div class="item">
+        <div
+          class="cuadrado rojo sombra"
+          onmouseover="ratonEncima(this)"
+          onmouseleave="ratonSale(this)"
+          onmousedown="pulsarMantener(this)"
+          onmouseup="pulsarSoltar(this)"
+          ondblclick="doblePulsar(this)"
+        ></div>
+        <button type="button" onclick="eliminar(this)">Eliminar</button>
+      </div>
+
+      <div class="item">
+        <div
+          class="cuadrado azul sombra"
+          onmouseover="ratonEncima(this)"
+          onmouseleave="ratonSale(this)"
+          onmousedown="pulsarMantener(this)"
+          onmouseup="pulsarSoltar(this)"
+          ondblclick="doblePulsar(this)"
+        ></div>
+        <button type="button" onclick="eliminar(this)">Eliminar</button>
+      </div>
+
+      <div class="item">
+        <div
+          class="cuadrado verde sombra""
+          onmouseover="ratonEncima(this)"
+          onmouseleave="ratonSale(this)"
+          onmousedown="pulsarMantener(this)"
+          onmouseup="pulsarSoltar(this)"
+          ondblclick="doblePulsar(this)"
+        ></div>
+        <button type="button" onclick="eliminar(this)">Eliminar</button>
+      </div>
+
+      <div class="item">
+        <div
+          class="cuadrado negro sombra"
+          onmouseover="ratonEncima(this)"
+          onmouseleave="ratonSale(this)"
+          onmousedown="pulsarMantener(this)"
+          onmouseup="pulsarSoltar(this)"
+          ondblclick="doblePulsar(this)"
+        ></div>
+        <button type="button" onclick="eliminar(this)">Eliminar</button>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

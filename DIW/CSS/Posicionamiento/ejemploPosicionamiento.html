@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejemplos de Position en CSS</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+
+  .container {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    margin-bottom: 50px;
+    position: relative; /* importante para absolute dentro */
+    height: 200px;
+  }
+
+  /* STATIC */
+  .static-box {
+    background-color: #f8b400;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: static;
+  }
+
+  /* RELATIVE */
+  .relative-box {
+    background-color: #4caf50;
+    padding: 10px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+
+  /* ABSOLUTE */
+  .absolute-box {
+    background-color: #2196f3;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+  }
+
+  /* FIXED */
+  .fixed-box {
+    background-color: #e91e63;
+    padding: 10px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  /* STICKY */
+  .sticky-box {
+    background-color: #9c27b0;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    margin-bottom: 500px; /* para poder hacer scroll */
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<h1>Ejemplos de Position en CSS</h1>
+
+<div class="container">
+  <div class="static-box">STATIC: posición por defecto</div>
+  <div class="relative-box">RELATIVE: desplazado 20px derecha y abajo</div>
+  <div class="absolute-box">ABSOLUTE: 50px desde arriba y 20px desde la derecha</div>
+</div>
+
+<div class="sticky-box">STICKY: se pega arriba al hacer scroll</div>
+
+<div style="height: 800px; background-color: #eee; padding: 10px;">
+  <p>Haz scroll para ver cómo funciona el sticky y el fixed.</p>
+  <div class="fixed-box">FIXED: siempre pegado a la ventana</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Iniciales JS</title>
+</head>
+<body>
+    <script>
+        //EJ1
+        let edad = prompt("Edad:");
+
+        if (edad >= 18) {
+            alert("Mayor de edad");
+        }else {
+            alert("Menor de edad");
+        }
+
+        //EJ2
+        let contrasenya = "1234";
+        let contrasenyaUser = prompt("Escribe la contraseña:");
+
+        if (contrasenyaUser === contrasenya) {
+            alert("Contraseña correcta");
+        }else {
+            alert("Contraseña incorrecta");
+        }
+
+        //EJ2 (mejorado):
+        "1234" == prompt("Introduce contraseña") ? alert("OK") : alert("No OK");
+
+        //EJ3
+        let n1 = prompt("Escribe el primer numero:");
+        let n2 = prompt("Escribe el segundo numero:");
+
+        if (n2) {
+            alert(n1/n2);
+        }else {
+            alert("El divisor no puede ser igual a 0");
+        }
+
+        //EJ3
+        if (prompt("Divisor:")) alert(prompt("Dividendo")/n2);
+        else alert("Divisor 0");
+
+        //EJ4
+        let numero = prompt("Escribe un numero y te diré si es par o impar:");
+
+        if (numero % 2 === 0){
+            alert("El numero es par");
+        }else {
+            alert("El numero es impar");
+        }
+
+        //EJ4 mejorado
+        //!prompt("Introduce un numero")%2 ? alert("PAR") ? alert("IMPAR");
+
+        //EJ5
+        let edad2 = prompt("Edad:");
+        let ingresos = prompt("Ingresos");
+
+        if (edad2 < 16 || ingresos<1000) {
+            alert("No puedes tributar");
+        }else {
+            alert("Puedes tributar");
+        }
+
+        //EJ6
+        let nombre = prompt("Dime tu nombre:");
+        let sexo = prompt("Sexo:");
+
+        if ((nombre.charAt(0).toLowerCase() < 'm' && sexo==="Mujer") || (nombre.charAt(0).toLowerCase() > 'n' && sexo==="Hombre")) {
+            alert("Grupo A");
+        }else {
+            alert("Grupo B");
+        }
+
+    </script>
+</body>
+</html>

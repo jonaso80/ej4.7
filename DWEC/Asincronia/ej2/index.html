@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>Ejercicio 2</title>
+  </head>
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        height: 100vh;
+    }
+
+    .formulario {
+        margin: 55px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .formulario input {
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .formulario button {
+        border-radius: 20px;
+    }
+  </style>
+  <body>
+    <div class="formulario">
+      <p>Minutos para que acabe el fin del mundo:</p>
+      <input type="text" name="minutos" id="minutos" placeholder="minutos" />
+      <button id="boton">Empezar cronómetro</button>
+    </div>
+    <p id="cronometro">--:--</p>
+  </body>
+</html>

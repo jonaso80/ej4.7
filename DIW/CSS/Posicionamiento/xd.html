@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Práctica de CSS con Position</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+
+  /* ---------- CABECERA ---------- */
+  header {
+    background-color: #32455b;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+  }
+
+  nav {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* ---------- SECCIÓN DE BIENVENIDA ---------- */
+  .intro {
+    text-align: center;
+    padding: 40px;
+  }
+
+  .intro p {
+    color: #666;
+  }
+
+  /* ---------- TARJETAS POSICIONADAS ---------- */
+  .tarjetas {
+    position: relative;
+    height: 200px;
+    text-align: center;
+  }
+
+  .tarjeta {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    background-color: #6ea8fe;
+    color: white;
+    border-radius: 8px;
+    line-height: 100px;
+    top: 40px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+  .tarjeta:nth-child(1) { left: 30%; }
+  .tarjeta:nth-child(2) { left: 45%; }
+  .tarjeta:nth-child(3) { left: 60%; }
+
+  /* ---------- SECCIÓN STICKY ---------- */
+  .sticky-section {
+    margin-top: 50px;
+    background-color: white;
+    padding: 20px 50px;
+  }
+
+  .sticky-header {
+    background-color: #2d8f69;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .sticky-section p {
+    margin-left: 20px;
+  }
+
+  .sticky-section a {
+    color: #6f42c1;
+    text-decoration: none;
+  }
+
+  /* ---------- ARTÍCULO PRINCIPAL ---------- */
+  article {
+    margin: 80px auto;
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ccc;
+  }
+
+  .relativo {
+    position: relative;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .boton-hover {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .boton-hover:hover {
+    background-color: #c0392b;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #32455b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  footer span {
+    color: #f39c12;
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <h1>Práctica de CSS con Position</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h2>Bienvenido a la Práctica CSS</h2>
+    <p>Esta sección sirve como introducción para la práctica avanzada de CSS. Aquí aprenderás a usar la propiedad position para organizar el contenido sin el uso de flexbox o grid.</p>
+  </section>
+
+  <section class="tarjetas">
+    <h3>Sección con Tarjetas Posicionadas</h3>
+    <div class="tarjeta">Tarjeta 1</div>
+    <div class="tarjeta">Tarjeta 2</div>
+    <div class="tarjeta">Tarjeta 3</div>
+  </section>
+
+  <section class="sticky-section">
+    <div class="sticky-header">Sección Sticky</div>
+    <p>Esta sección tiene un encabezado que se mantiene visible al hacer scroll, gracias a la propiedad <code>position: sticky</code>.</p>
+    <p>→ Lorem ipsum dolor sit amet, consectetur adipiscing elit... <a href="#">Continuar leyendo.</a></p>
+    <p>→ Suspendisse varius felis vel sapien laoreet, at facilisis purus interdum... <a href="#">Continuar leyendo.</a></p>
+    <p>→ Curabitur ultricies diam nec orci varius posuere... <a href="#">Continuar leyendo.</a></p>
+  </section>
+
+  <article>
+    <h3>Artículo Principal</h3>
+    <div class="relativo">
+      <p>Este cuadro está en posición relativa.</p>
+      <button class="boton-hover">Hover sobre mí</button>
+    </div>
+  </article>
+
+  <footer>
+    <p>— Desarrollado por <span>Tu nombre</span> —</p>
+  </footer>
+</body>
+</html>

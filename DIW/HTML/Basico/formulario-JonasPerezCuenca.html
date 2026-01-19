@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario - Jonas Pérez</title>
+  </head>
+  <body>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 500px;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+      .container {
+        display: flex;
+        max-width: 1200px;
+        padding: 10px 20px 20px 10px;
+        flex-direction: column;
+        background-color: #c3c0c1;
+        border: 2px solid black;
+        border-radius: 5px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: right;
+      }
+
+      .form-row {
+        display: flex;
+        align-items: center;
+      }
+
+      .form-row label {
+        width: 150px;
+        text-align: right;
+        margin-right: 10px;
+      }
+
+      .form input {
+        width: 550px;
+        height: 25px;
+        border-radius: 5px;
+        box-shadow: inset 2px 2px 12px rgba(0, 0, 0, 0.5);
+      }
+
+      .btn {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .btn button {
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: 8px 30px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    </style>
+    <div class="container">
+      <h1>Formulario total</h1>
+      <div class="form">
+        <form action="" id="formulario">
+          <label for="nombre">Nombre:</label>
+          <input type="text" name="nombre" id="nombreInput" /><br /><br />
+          <label for="apellidos">Apellidos:</label>
+          <input type="text" name="apellidos" id="apellidosInput" /><br /><br />
+          <label for="email">Email:</label>
+          <input type="text" name="email" id="emailInput" /><br /><br />
+          <label for="dni">DNI:</label>
+          <input type="text" name="dni" id="dniInput" /><br /><br />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="passwordInput"
+          /><br /><br />
+          <label for="password">Repetir password:</label>
+          <input
+            type="password"
+            name="password2"
+            id="password2input"
+          /><br /><br />
+          <label for="ipEquipo">IP Equipo:</label>
+          <input type="text" name="ipEquipo" id="ipEquipoInput" />
+        </form>
+      </div>
+      <div class="btn">
+        <button id="btn">Enviar</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio</title>
+  </head>
+  <body>
+    <div id="caja"
+      style="
+        border-style: solid;
+        border-color: black;
+        border-width: 3px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+      "
+    ></div>
+    <form>
+      <input type="radio" name="color" value="red" />red
+      <input type="radio" name="color" value="green" />green
+      <input type="radio" name="color" value="blue" />blue
+      <input type="radio" name="color" value="yellow" />yellow
+    </form>
+    <button onclick="cambiarColor()">CAMBIAR COLOR</button>
+    <script>
+      function cambiarColor() {
+        const colores = document.getElementsByName("color");
+
+        for (let i = 0; i <= colores.length; i++) {
+          if (colores[i].checked) {
+            caja.style.backgroundColor =
+              colores[i].value;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

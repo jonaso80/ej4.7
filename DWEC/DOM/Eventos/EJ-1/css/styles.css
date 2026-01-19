@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.addDiv {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}

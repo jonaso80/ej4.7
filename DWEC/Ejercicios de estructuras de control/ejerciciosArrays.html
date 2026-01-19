@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Arrays</title>
+</head>
+<body>
+    <script>
+        //Ejercicio 1
+        let diasSemana = ['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
+
+        let diaIndex = prompt("Dime el numero del dia de la semana y te diré su dia:");
+        alert(diasSemana[diaIndex-1]);
+
+        let xd = '3+2';
+        alert(eval(xd));
+
+        let xd2 = new String('2+2');
+        alert(eval(xd2));
+
+        let ip = '192.168.20.1';
+        let ipFormateada = ip.replace(/\./g,'_');
+        alert(ipFormateada);
+        const pattern = /^(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(\_(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)){3}$/;
+        alert(pattern.test(ipFormateada));
+
+        let cadena = "Hola buenos dias Manolo";
+        let numeroAencadena = (cadena.match(/a/gi)).length;
+        alert(`La letra A aparece ${numeroAencadena} veces`);
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 10px;
+    margin: 20px 0;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #3498db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.card.flipped {
+    background-color: #2ecc71;
+}
+
+.card.matched {
+    background-color: #95a5a6;
+    cursor: default;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#restart-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    color: #fff;
+    transition: background-color 0.2s;
+}
+
+#restart-btn:hover {
+    background-color: #c0392b;
+}
