@@ -1,0 +1,21 @@
+<div class="layout-container">
+  <header class="header">
+    <ng-content select="landing-page__cabecera"></ng-content>
+  </header>
+  
+  <aside class="left-sidebar">
+    <ng-content select="landing-page__lateral-izquierdo"></ng-content>
+  </aside>
+  
+  <main class="content">
+    <ng-content select="landing-page__cuerpo"></ng-content>
+  </main>
+  
+  <aside class="right-sidebar">
+    <ng-content select="landing-page__lateral-derecho"></ng-content>
+  </aside>
+  
+  <footer class="footer">
+    <ng-content select="landing-page__pie"></ng-content>
+  </footer>
+</div>
